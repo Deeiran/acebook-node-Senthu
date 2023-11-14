@@ -48,7 +48,7 @@ jobs:
                   aws deploy push \
                     --application-name senthu-acebook-app \
                     --ignore-hidden-files \
-                    --s3-location s3://senthu-acebook-s3/deployable-artifact.zip \
+                    --s3-location s3://senthu-acebook-bucket/deployable-artifact.zip \
                     --source .
               
             - name: Deploy to CodeDeploy
@@ -56,7 +56,7 @@ jobs:
                   aws deploy create-deployment \
                     --application-name senthu-acebook-app \
                     --deployment-group senthu-acebook-group \
-                    --s3-location bucket=senthu-acebook-s3,key=deployable-artifact.zip,bundleType=zip
+                    --s3-location bucket=senthu-acebook-bucket,key=deployable-artifact.zip,bundleType=zip
 
 
             
