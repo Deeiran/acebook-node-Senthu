@@ -8,3 +8,4 @@ export NVM_DIR="$HOME/.nvm"
 nvm install 18
 nvm use 18
 npm install
+npm install pm2
