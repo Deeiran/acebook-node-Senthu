@@ -31,13 +31,6 @@ jobs:
             - name: checkout code
               uses: actions/checkout@v2
 
-            - name: setup node
-              uses: actions/setup-node@v3
-              with: 
-                node-version: 18
-                
-            - name: install dependencies
-              run: npm install 
             - name: configure AWS Credentials
               uses: aws-actions/configure-aws-credentials@v1
               with: 
