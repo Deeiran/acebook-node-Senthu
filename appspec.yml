@@ -5,6 +5,10 @@ files:
     destination: /var/acebook
 
 hooks: 
+  ApplicationStop:
+    - location: scripts/application-stop.sh
+      runas:root
+
   AfterInstall: 
     - location: scripts/after-install.sh
       runas: root
@@ -12,4 +16,3 @@ hooks:
   ApplicationStart:
     - location: scripts/application-start.sh
       runas: ec2-user
-      
